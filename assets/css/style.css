@@ -1,0 +1,61 @@
+*{
+    scroll-behavior: smooth;
+    transition: all 0.3s;
+}
+
+body {
+    background: linear-gradient(rgb(0, 0, 0), #000, #121212, #001b2b);
+}
+
+nav .nav-container {
+    background: #121212;
+    padding: 12px;
+    color: #fff;
+}
+
+.btn-full {
+    background: rgb(30 64 175);
+    color: #fff;
+    border: 1px solid rgb(30 64 175);
+    padding: 5px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    transition: all 0.3s;
+}
+
+.btn-full:hover {
+    background: rgb(30 58 138);
+    color: #fff;
+    border: 1px solid rgb(30 58 138);
+
+    transition: all 0.3s;
+}
+
+.btn-stroke {
+    background: transparent;
+    border: 2px solid rgb(30 64 175);
+    padding: 5px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    transition: all 0.3s;
+}
+
+.btn-stroke:hover {
+    background: rgb(30 58 138);
+    color: #fff;
+    border: 2px solid rgb(30 58 138);
+
+    transition: all 0.3s;
+}
+
+#mobileMenu .flex {
+    background-color: #121212;
+    color: #fff;
+}
+
+.active {
+    color: rgb(30 64 175);
+    text-shadow: rgb(30 58 138) 0px 0px 10px;
+}
