@@ -6,7 +6,7 @@ loginBtn.addEventListener('click', () => {
 });
 
 signUpBtn.addEventListener('click', () => {
-    window.location.href = '/fume/signup.html';
+    window.location.href = '/fume/register.html';
 });
 
 
