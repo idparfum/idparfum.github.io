@@ -24,9 +24,19 @@ document
       },
       body: JSON.stringify(data),
     })
-      .then((response) => response.json())
+      .then((response) => {
+        if (!response.ok) {
+          return response.json().then((err) => {
+            throw new Error(err.message || "Pendaftaran gagal. Silakan coba lagi.");
+          });
+        }
+        return response.json();
+      })
       .then((data) => {
-        if (data.message === "Berhasil Register!") {
+        // Tambahkan logging untuk debugging
+        console.log("Response Data:", data);
+
+        if (data?.message === "Registrasi Berhasil!") {
           Swal.fire({
             icon: "success",
             title: "Pendaftaran Berhasil",
@@ -37,9 +47,12 @@ document
             }
           });
         } else {
-          throw new Error(
-            data.message || "Pendaftaran gagal. Silakan coba lagi."
-          );
+          // Hanya tampilkan error jika ada pesan selain "Berhasil Register!"
+          Swal.fire({
+            icon: "error",
+            title: "Gagal Mendaftar",
+            text: data.message || "Pendaftaran gagal. Silakan coba lagi.",
+          });
         }
       })
       .catch((error) => {
@@ -47,7 +60,7 @@ document
         Swal.fire({
           icon: "error",
           title: "Gagal Mendaftar",
-          text: error.message,
+          text: error.message || "Terjadi kesalahan pada server.",
         });
       });
   });
