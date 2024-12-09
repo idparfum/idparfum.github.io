@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Parfum.id</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/logo.png" type="image/png">
+
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- phosphore icon -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+</head>
+
+<body class="flex justify-center items-center min-h-screen">
+
+    <div class="w-full max-w-sm bg-white p-8 rounded-lg shadow-lg">
+        <a href="../index.html" class="flex items-center gap-1">
+            <i class="ph ph-arrow-circle-left"></i>
+            <p>Back</p>
+        </a>
+
+        <div class="text-center mb-6">
+            <img src="../assets/images/logo.png" alt="logo" class="w-16 h-16 rounded-full mx-auto mb-4">
+            <h2 class="text-2xl font-semibold">Login ke Parfum.id</h2>
+        </div>
+
+        <!-- Login Form -->
+        <form action="login.html" method="POST" id="loginForm">
+            <div class="mb-4">
+                <label for="nama" class="block text-sm font-medium text-gray-700">Email / Username</label>
+                <input type="text" id="nama" name="nama" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Masukkan Email atau Username" required>
+            </div>
+
+            <div class="mb-6">
+                <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                <input type="password" id="password" name="password" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Masukkan Password" required>
+            </div>
+
+            <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center">
+                    <input type="checkbox" id="rememberMe" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded">
+                    <label for="rememberMe" class="ml-2 text-sm text-gray-600">Ingat saya</label>
+                </div>
+                <a href="#" class="text-sm text-indigo-600 hover:text-indigo-500">Lupa Password?</a>
+            </div>
+
+            <button id="loginButton" type="button" class="w-full bg-indigo-600 text-white py-2 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">Login</button>
+        </form>
+
+        <!-- Signup Link -->
+        <div class="mt-4 text-center">
+            <p class="text-sm text-gray-600">Belum punya akun? <a href="signup.html" class="text-indigo-600 hover:text-indigo-500">Daftar Sekarang</a></p>
+        </div>
+    </div>
+
+    <script type="module" src="../assets/js/login.js"></script>
+</body>
+
+</html>

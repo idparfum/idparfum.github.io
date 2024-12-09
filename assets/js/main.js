@@ -2,11 +2,11 @@ const loginBtn = document.getElementById('loginBtn');
 const signUpBtn = document.getElementById('signUpBtn');
 
 loginBtn.addEventListener('click', () => {
-    window.location.href = '/pages/login.html';
+    window.location.href = '/fume/login.html';
 });
 
 signUpBtn.addEventListener('click', () => {
-    window.location.href = '/pages/signup.html';
+    window.location.href = '/fume/signup.html';
 });
 
 
