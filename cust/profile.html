@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile | Parfum.id</title>
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/fume-logo.jpg" type="image/png">
+
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- phosphore icon -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+    <nav id="nav" class="sticky top-0 z-50">
+        <div class="nav-container flex justify-between items-center p-4 px-12">
+            <!-- Profile Section (Link to Edit Profile Page) -->
+            <div class="user-profile">
+                <a href="edit-profile.html" class="flex justify-between gap-2 items-center">
+                    <i class="ph ph-gear text-2xl"></i>
+                    <h1 class="text-xl">Profile Settings</h1>
+                </a>
+            </div>
+
+            <div class="menu hidden lg:flex">
+                <ul class="flex justify-around md:gap-6 lg:gap-8 items-center">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#"><i class="ph ph-shopping-cart"></a></i></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto">
+        <form id="profileForm">
+            <div class="banner">
+            </div>
+            <div class="profile-wrapper px-12">
+                <div class="profile-picture">
+                    <img src="../assets/images/profile-picture-default.jpg" alt="profile-picture">
+                    <div class="flex flex-col bg-gray-200">
+                        <p>Ubah Foto Profil</p>
+                        <input type="file" id="profilePicture" name="profilePicture" accept="image/*">
+                    </div>
+                </div>
+                <div class="biodata">
+                    <p class="text4xl">Nama</p>
+                    <p class="text-xl">Role</p>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script type="module" src="../assets/js/profile.js"></script>
+
+</body>
+</html>

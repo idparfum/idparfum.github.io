@@ -59,3 +59,37 @@ nav .nav-container {
     color: rgb(30 64 175);
     text-shadow: rgb(30 58 138) 0px 0px 10px;
 }
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.ph-gear {
+    animation: spin 10s linear infinite;
+}
+
+.banner {
+    background-color: #001b2b;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.profile-wrapper {
+    position: absolute;
+    top: 25%; 
+}
+
+.profile-picture {
+    width: 200px;
+    height: 200px;
+    display: block;
+}
